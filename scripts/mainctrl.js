@@ -1,4 +1,5 @@
 //rgbToHex and hexToRgb functions from http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+//zeroes truncated using http://stackoverflow.com/questions/8276451/remove-truncate-leading-zeros-by-javascript-jquery
 
 function MainCtrl ($scope) {
 	$scope.red = Math.floor((Math.random()*256));
@@ -82,6 +83,8 @@ function MainCtrl ($scope) {
 		$scope.newVal = prompt("Please enter the new red value", $scope.red);
 		if ($scope.newVal == null || $scope.newVal == "") return;
 		if (isNaN($scope.newVal)) return;
+		if ($scope.newVal == 0) $scope.newVal = "0";
+		if ($scope.newVal != "0") $scope.newVal = $scope.newVal.replace(/^0+/, '');
 		if ($scope.newVal>255) $scope.newVal = 255;
 		if ($scope.newVal<0) $scope.newVal = 0;
 		$scope.rememberLast();
@@ -92,6 +95,8 @@ function MainCtrl ($scope) {
 		$scope.newVal = prompt("Please enter the new green value", $scope.green);
 		if ($scope.newVal == null || $scope.newVal == "") return;
 		if (isNaN($scope.newVal)) return;
+		if ($scope.newVal == 0) $scope.newVal = "0";
+		if ($scope.newVal != "0") $scope.newVal = $scope.newVal.replace(/^0+/, '');
 		if ($scope.newVal>255) $scope.newVal = 255;
 		if ($scope.newVal<0) $scope.newVal = 0;
 		$scope.rememberLast();
@@ -102,6 +107,8 @@ function MainCtrl ($scope) {
 		$scope.newVal = prompt("Please enter the new blue value", $scope.blue);
 		if ($scope.newVal == null || $scope.newVal == "") return;
 		if (isNaN($scope.newVal)) return;
+		if ($scope.newVal == 0) $scope.newVal = "0";
+		if ($scope.newVal != "0") $scope.newVal = $scope.newVal.replace(/^0+/, '');
 		if ($scope.newVal>255) $scope.newVal = 255;
 		if ($scope.newVal<0) $scope.newVal = 0;
 		$scope.rememberLast();
