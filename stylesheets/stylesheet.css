@@ -1,0 +1,58 @@
+/* line 1, ../sass/stylesheet.scss */
+* {
+  overflow: hidden;
+}
+
+/* line 5, ../sass/stylesheet.scss */
+h1 {
+  text-align: center;
+}
+
+/* line 9, ../sass/stylesheet.scss */
+#footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 12px;
+  font-size: 20px;
+  font-family: "Helvetica";
+}
+
+/* line 18, ../sass/stylesheet.scss */
+.main {
+  background-color: white;
+  border: 4px solid black;
+  border-radius: 12px;
+  padding: 10px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 400px;
+}
+
+/* line 31, ../sass/stylesheet.scss */
+.left {
+  float: left;
+  text-align: right;
+  width: 200px;
+}
+
+/* line 37, ../sass/stylesheet.scss */
+.right {
+  float: right;
+  text-align: center;
+  width: 200px;
+  font-size: 20px;
+}
+
+/* line 44, ../sass/stylesheet.scss */
+.buttons {
+  clear: both;
+  text-align: center;
+}
+/* line 47, ../sass/stylesheet.scss */
+.buttons div.ng-scope {
+  display: inline;
+}
